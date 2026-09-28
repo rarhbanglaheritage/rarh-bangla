@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rarh Bangla | Heritage • Culture • Cinema</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4ead8;
+    color:#321d16;
+    font-family:'Hind Siliguri',sans-serif;
+}
+
+/* ===============================
+   CULTURAL BORDER
+================================ */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:14px;
+    background:
+    repeating-linear-gradient(
+        180deg,
+        #6d2418 0px,
+        #6d2418 24px,
+        #9b4b2e 25px,
+        #9b4b2e 30px,
+        #6d2418 31px,
+        #6d2418 55px
+    );
+    z-index:999;
+}
+
+body::before{
+    left:0;
+}
+
+body::after{
+    right:0;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+nav{
+    position:fixed;
+    top:0;
+    left:14px;
+    right:14px;
+    z-index:100;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(49,29,22,.92);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(224,181,104,.35);
+}
+
+.logo{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:25px;
+    font-weight:800;
+    color:#f4d49a;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    display:block;
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:10px;
+    letter-spacing:4px;
+    color:#cda66a;
+    text-transform:uppercase;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:26px;
+}
+
+nav a{
+    color:#f5ead8;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e3b86c;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(43,22,16,.48),rgba(43,22,16,.78)),
+    url("hero.jpg") center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:25px;
+    border:1px solid rgba(242,206,140,.5);
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:40px 25px;
+}
+
+.eyebrow{
+    color:#e1b76c;
+    letter-spacing:6px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Noto Serif Bengali',serif;
+    color:#fff3dc;
+    font-size:clamp(55px,10vw,110px);
+    line-height:1;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#d59b4d;
+}
+
+.hero p{
+    color:#f1dfc1;
+    font-size:19px;
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.hero-button{
+    display:inline-block;
+    margin-top:35px;
+    padding:13px 28px;
+    border:1px solid #d8aa5e;
+    color:#fff1d1;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.hero-button:hover{
+    background:#d8aa5e;
+    color:#321d16;
+}
+
+/* ===============================
+   SECTION
+================================ */
+
+section{
+    padding:110px 8%;
+    position:relative;
+}
+
+.section-label{
+    color:#9c542f;
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:clamp(35px,5vw,58px);
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.section-intro{
+    max-width:700px;
+    color:#715b4d;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* ===============================
+   ABOUT
+================================ */
+
+.about{
+    background:#efe1c8;
+}
+
+.about-grid{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:520px;
+    background:url("culture.jpg") center/cover;
+    border:8px solid #e6d1ad;
+    outline:1px solid #9c542f;
+    outline-offset:-18px;
+}
+
+.about-text p{
+    margin-bottom:20px;
+    line-height:1.9;
+    color:#644e41;
+}
+
+/* ===============================
+   SERVICES
+================================ */
+
+.services{
+    background:#321d16;
+    color:#f5e6ce;
+}
+
+.services .section-label{
+    color:#d6a35d;
+}
+
+.services .section-title{
+    color:#fff0d4;
+}
+
+.service-grid{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid rgba(216,170,94,.35);
+    border-left:1px solid rgba(216,170,94,.35);
+}
+
+.service{
+    padding:42px 30px;
+    min-height:220px;
+    border-right:1px solid rgba(216,170,94,.35);
+    border-bottom:1px solid rgba(216,170,94,.35);
+    transition:.35s;
+}
+
+.service:hover{
+    background:#44271e;
+    transform:translateY(-5px);
+}
+
+.service-number{
+    color:#c99751;
+    font-size:13px;
+    letter-spacing:3px;
+}
+
+.service h3{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:28px;
+    margin:20px 0 10px;
+    color:#f4dfbb;
+}
+
+.service p{
+    color:#c9b8a1;
+    line-height:1.7;
+}
+
+/* ===============================
+   DOCUMENTARY FEATURE
+================================ */
+
+.documentary{
+    background:#f7edda;
+}
+
+.doc-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+    margin-top:50px;
+}
+
+.doc-image{
+    min-height:500px;
+    background:url("documentary.jpg") center/cover;
+    position:relative;
+}
+
+.doc-image::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid rgba(255,255,255,.7);
+}
+
+.doc-content h3{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.doc-content p{
+    color:#685347;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+/* ===============================
+   ART & CULTURE GALLERY
+================================ */
+
+.gallery{
+    background:#e7d4b4;
+}
+
+.gallery-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    height:420px;
+    overflow:hidden;
+    position:relative;
+    background:#8d5c3f;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.07);
+}
+
+.gallery-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:45px 20px 20px;
+    background:linear-gradient(transparent,rgba(35,19,13,.9));
+    color:white;
+}
+
+.gallery-caption h3{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:24px;
+}
+
+/* ===============================
+   QUOTE
+================================ */
+
+.quote{
+    background:#6c261b;
+    color:#f7e5c3;
+    text-align:center;
+    padding:100px 12%;
+}
+
+.quote-mark{
+    font-family:serif;
+    font-size:70px;
+    color:#d5a45e;
+    line-height:.6;
+}
+
+.quote p{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:clamp(25px,4vw,42px);
+    line-height:1.7;
+    margin:30px auto;
+    max-width:900px;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+
+.contact{
+    background:#f1e4cd;
+}
+
+.contact-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-info{
+    border-left:3px solid #9b4c2f;
+    padding-left:25px;
+}
+
+.contact-item{
+    margin-bottom:25px;
+}
+
+.contact-item small{
+    display:block;
+    color:#9b5a3b;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:11px;
+}
+
+.contact-item a,
+.contact-item span{
+    color:#38231a;
+    text-decoration:none;
+    font-size:19px;
+}
+
+.contact-note{
+    font-family:'Noto Serif Bengali',serif;
+    font-size:34px;
+    line-height:1.5;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer{
+    background:#26150f;
+    color:#bda78d;
+    padding:45px 8%;
+    text-align:center;
+}
+
+.footer-logo{
+    font-family:'Noto Serif Bengali',serif;
+    color:#e2bc78;
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+footer p{
+    font-size:13px;
+    margin:5px 0;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    color:#e2bc78;
+    text-decoration:none;
+    margin:0 12px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:800px){
+
+    body::before,
+    body::after{
+        width:7px;
+    }
+
+    nav{
+        left:7px;
+        right:7px;
+        padding:15px 6%;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero::before{
+        inset:15px;
+    }
+
+    section{
+        padding:80px 8%;
+    }
+
+    .about-grid,
+    .doc-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-item{
+        height:330px;
+    }
+
+    .contact-note{
+        font-size:27px;
+    }
+}
+
+@media(max-width:500px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:400px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">
+        রাঢ় বাংলা
+        <span>Heritage • Culture • Cinema</span>
+    </div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            RARH BANGLA
+        </div>
+
+        <h1>
+            রাঢ় <span>বাংলা</span>
+        </h1>
+
+        <p>
+            Stories of the soil, culture of the people,
+            and the visual language of Bengal.
+        </p>
+
+        <a class="hero-button" href="#work">
+            Explore Our Work ↓
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-label">
+        Our Identity
+    </div>
+
+    <h2 class="section-title">
+        মাটির গল্প থেকে<br>
+        পর্দার গল্পে
+    </h2>
+
+    <p class="section-intro">
+        রাঢ় বাংলার মাটি, মানুষ, শিল্প, ইতিহাস ও সংস্কৃতিকে
+        আধুনিক visual storytelling-এর মাধ্যমে তুলে ধরাই আমাদের
+        উদ্দেশ্য।
+    </p>
+
+    <div class="about-grid">
+
+        <div class="about-image"></div>
+
+        <div class="about-text">
+
+            <p>
+                আমাদের গল্প শুরু হয় রাঢ় বাংলার সেই মাটি থেকে,
+                যেখানে পোড়ামাটির মন্দির, লোকশিল্প, সংগীত,
+                কারুশিল্প ও মানুষের জীবন একে অপরের সঙ্গে মিশে আছে।
+            </p>
+
+            <p>
+                Documentary থেকে Short Film, Live Production থেকে
+                Album Shooting—প্রতিটি কাজের মধ্যে আমরা খুঁজি
+                একটি নিজস্ব Bengali visual identity।
+            </p>
+
+            <p>
+                ঐতিহ্যকে শুধু সংরক্ষণ নয়, নতুন প্রজন্মের সামনে
+                নতুন ভাষায় তুলে ধরাই আমাদের পথ।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="work">
+
+    <div class="section-label">
+        What We Do
+    </div>
+
+    <h2 class="section-title">
+        আমাদের কাজ
+    </h2>
+
+    <div class="service-grid">
+
+        <div class="service">
+            <span class="service-number">01</span>
+            <h3>Documentary</h3>
+            <p>
+                ইতিহাস, মানুষ, সংস্কৃতি ও বাস্তব জীবনের
+                গল্পকে cinematic documentary-তে তুলে ধরা।
+            </p>
+        </div>
+
+        <div class="service">
+            <span class="service-number">02</span>
+            <h3>Live Production</h3>
+            <p>
+                Cultural অনুষ্ঠান, festival ও live event
+                production এবং visual coverage।
+            </p>
+        </div>
+
+        <div class="service">
+            <span class="service-number">03</span>
+            <h3>Album Shooting</h3>
+            <p>
+                Music album, artist profile ও creative
+                visual production।
+            </p>
+        </div>
+
+        <div class="service">
+            <span class="service-number">04</span>
+            <h3>Music</h3>
+            <p>
+                Bengali music এবং independent artists-এর
+                জন্য visual ও creative production।
+            </p>
+        </div>
+
+        <div class="service">
+            <span class="service-number">05</span>
+            <h3>Short Film</h3>
+            <p>
+                ছোট গল্পকে cinematic language-এ
+                screen-এর জন্য তৈরি করা।
+            </p>
+        </div>
+
+        <div class="service">
+            <span class="service-number">06</span>
+            <h3>Direction</h3>
+            <p>
+                Documentary এবং film direction-এর
+                সম্পূর্ণ creative process।
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOCUMENTARY -->
+
+<section class="documentary">
+
+    <div class="section-label">
+        Featured
+    </div>
+
+    <div class="doc-grid">
+
+        <div class="doc-image"></div>
+
+        <div class="doc-content">
+
+            <h3>
+                Stories Worth<br>
+                Remembering.
+            </h3>
+
+            <p>
+                একটি জায়গার ইতিহাস শুধু পুরনো স্থাপত্যে থাকে না।
+                থাকে মানুষের কথায়, শিল্পীর হাতে, গানের সুরে,
+                মাটির গন্ধে এবং প্রজন্মের স্মৃতিতে।
+            </p>
+
+            <p>
+                আমাদের documentary work সেই অদৃশ্য গল্পগুলোকে
+                camera-র সামনে নিয়ে আসে।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CULTURE -->
+
+<section class="gallery" id="culture">
+
+    <div class="section-label">
+        Art & Culture
+    </div>
+
+    <h2 class="section-title">
+        মাটির শিল্প,<br>
+        বাংলার পরিচয়
+    </h2>
+
+    <p class="section-intro">
+        রাঢ় বাংলার লোকশিল্প ও কারুশিল্পের বৈচিত্র্য আমাদের
+        visual identity-এর অন্যতম অংশ।
+    </p>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="terracotta.jpg" alt="Terracotta Art">
+            <div class="gallery-caption">
+                <h3>পোড়ামাটি</h3>
+                <p>Terracotta Art</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="craft-1.jpg" alt="Bengal Craft">
+            <div class="gallery-caption">
+                <h3>লোকশিল্প</h3>
+                <p>Folk Craft</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="craft-2.jpg" alt="Traditional Craft">
+            <div class="gallery-caption">
+                <h3>কারুশিল্প</h3>
+                <p>Traditional Craft</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="craft-3.jpg" alt="Bengal Art">
+            <div class="gallery-caption">
+                <h3>বাংলার শিল্প</h3>
+                <p>Art of Bengal</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="craft-4.jpg" alt="Terracotta Sculpture">
+            <div class="gallery-caption">
+                <h3>টেরাকোটা</h3>
+                <p>Clay Sculpture</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="craft-5.jpg" alt="Bengal Handicraft">
+            <div class="gallery-caption">
+                <h3>বেতশিল্প</h3>
+                <p>Handicraft</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+    <div class="quote-mark">“</div>
+
+    <p>
+        মাটি বদলায়, সময় বদলায়—
+        কিন্তু গল্পগুলো থেকে যায়।
+    </p>
+
+    <div class="quote-mark">”</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-label">
+        Get In Touch
+    </div>
+
+    <h2 class="section-title">
+        Let's create<br>
+        something meaningful.
+    </h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-note">
+            আপনার গল্পটা আমাদের বলুন।
+            <br><br>
+            আমরা সেটাকে ছবিতে,
+            শব্দে ও গল্পে তুলে ধরব।
+        </div>
+
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+                <small>Name</small>
+                <span>Your Name</span>
+            </div>
+
+            <div class="contact-item">
+                <small>Phone</small>
+                <a href="tel:+919XXXXXXXXX">
+                    +91 9XXXXXXXXX
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <small>Email</small>
+                <a href="mailto:hello@rarhbangla.in">
+                    hello@rarhbangla.in
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <small>Instagram</small>
+                <a href="#">
+                    @rarhbangla
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        রাঢ় বাংলা
+    </div>
+
+    <p>
+        Heritage • Culture • Cinema
+    </p>
+
+    <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Facebook</a>
+    </div>
+
+    <br>
+
+    <p>
+        © 2026 Rarh Bangla. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
